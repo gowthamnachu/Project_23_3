@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowtham Nachu - Resume</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000; /* Initial black background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            animation: changeBackground 20s infinite alternate;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            animation: fadeIn 1s ease forwards;
+            position: relative;
+        }
+
+        .container:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, #eef6fc, #e3eff7);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: -webkit-linear-gradient(#3498db, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            animation: slideInLeft 0.6s ease;
+            background: -webkit-linear-gradient(#2980b9, #16a085);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 span {
+            display: inline-block;
+            border-bottom: 3px solid #3498db;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #dfe6e9;
+            animation: slideInTop 1s ease forwards;
+        }
+
+        .header .profile-pic img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .header .profile-pic img:hover {
+            transform: scale(1.2) rotate(8deg); /* Increased scale to 1.2 */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f7f9fc;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            transition: background-color 0.3s ease;
+        }
+
+        .section:hover {
+            background-color: #d6eaf8;
+        }
+
+        /* List styling */
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .section ul li:hover {
+            color: #3498db;
+        }
+
+        .skills ul li,
+        .languages ul li {
+            color: #3498db;
+        }
+
+        /* Animation effects */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes changeBackground {
+            0% { background: #000000; }
+            20% { background: #2c3e50; }
+            40% { background: #34495e; }
+            60% { background: #2c3e50; }
+            80% { background: #000000; }
+            100% { background: #2c3e50; }
+        }
+
+        /* Credits Section */
+        .credits {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .credits a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .credits a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-text">
+                <h1>Gowtham Nachu</h1>
+                <p>Visakhapatnam, India</p>
+                <p class="contact-info">+8247525297 | gowthamnachu@gmail.com</p>
+            </div>
+            <div class="profile-pic">
+                <img src="{% static 'images/profile.jpg.jpg' %}" alt="Gowtham Nachu">
+            </div>
+        </header>
+
+        <!-- Professional Summary Section -->
+        <section class="section summary">
+            <h2><span>Professional Summary</span></h2>
+            <p>
+                A highly motivated and innovative student currently in my second year of undergraduate studies, seeking hands-on experience in the industry. Proven ability to develop business plans, conduct market research, and drive strategic initiatives.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills">
+            <h2><span>Skills</span></h2>
+            <ul>
+                <li>Microsoft Office</li>
+                <li>Teamwork and Communication</li>
+                <li>Problem Solving</li>
+                <li>Full Stack Development (HTML, CSS, JavaScript, Python)</li>
+                <li>Leadership and Project Management</li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="section languages">
+            <h2><span>Languages</span></h2>
+            <ul>
+                <li>Telugu - Native</li>
+                <li>Hindi - Fluent</li>
+                <li>English - Fluent</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education">
+            <h2><span>Education</span></h2>
+            <ul>
+                <li><strong>B.Tech in AI & DS</strong> - KL University, Hyderabad (July 2023 - July 2027)</li>
+                <li><strong>12th Grade</strong> - Narayana, Hyderabad (March 2021 - March 2023)</li>
+                <li><strong>10th Grade</strong> - Vagdevi Vidya Mandir, Hyderabad (March 2009 - March 2021)</li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience">
+            <h2><span>Experience</span></h2>
+            <p><em>No formal work experience yet, but actively engaged in various internships and volunteering opportunities.</em></p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects">
+            <h2><span>Projects</span></h2>
+            <ul>
+                <li><strong>Shopping App</strong> - Developed a user-friendly Android shopping app interface with animations and transitions (2023)</li>
+                <li><strong>BMI Calculator</strong> - Created a web app to calculate BMI, using Django (2023)</li>
+            </ul>
+        </section>
+
+        <!-- Extra-Curricular Activities Section -->
+        <section class="section extracurricular">
+            <h2><span>Extra-Curricular Activities</span></h2>
+            <ul>
+                <li>Sports - Participated in college-level football and cricket tournaments.</li>
+                <li>Skating - Regional-level skater.</li>
+            </ul>
+        </section>
+
+        <!-- Credits Section -->
+        <section class="credits">
+            <p>Design and Development by <a href="https://www.linkedin.com/in/gowthamnachu" target="_blank">Gowtham Nachu</a>. All rights reserved.</p>
+        </section>
+    </div>
+</body>
+</html>
