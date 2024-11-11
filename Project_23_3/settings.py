@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%ak=w4sd-(z#(-@%p5-#xh=4t^1j$0%35ogahg20y4_bg@q(o1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gowthamresume.onrender.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['gowthamresume.onrender.com','127.0.0.1']
 
 import os
 # Application definition
